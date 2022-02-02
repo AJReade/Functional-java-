@@ -67,13 +67,13 @@ public class Rectangle {
 
   public boolean intersects(Rectangle other) {
     return ((other.x1 >= this.x1 && other.x1 <= this.x2)
-        || (other.x2 >= this.x1 && other.x2 <= this.x2)) &&
+        || (other.x2 >= this.x1 && other.x2 <= this.x2))
+        &&
         ((other.y1 >= this.y1 && other.y1 <= this.y2)
             || (other.y2 >= this.y1 && other.y2 <= this.y2));
 
   }
 
-  //    Optional<Rectangle> intersecRec = Optional.of(new Rectangle(new Point(x1, y1), width, height));
   public Optional<Rectangle> intersection(Rectangle other) {
     if (this.intersects(other)) {
       int x1;

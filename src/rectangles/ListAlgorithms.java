@@ -101,10 +101,6 @@ public class ListAlgorithms {
    * Returns the largest area among the given rectangles.
    */
   public static int findLargestArea(List<Rectangle> rectangles) {
-    if (rectangles.size() == 0) {
-      throw new IllegalArgumentException("Empty input list.");
-    }
-
     int temp = 0;
     for (Rectangle rec : rectangles) {
       if (rec.area() > temp) {

@@ -2,9 +2,10 @@ package rectangles;
 
 import java.util.Map;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import java.util.Optional;
+
 
 
 public class StreamAlgorithms {
@@ -119,10 +120,6 @@ public class StreamAlgorithms {
         Rectangle::area));
   }
 
-  /**
-   * reduce on the stream of rectangles to produce an Optional that contains the common intersection
-   * of all rectangles in the stream
-   */
   public static Optional<Rectangle> intersectAll(Stream<Rectangle> rectangles) {
     try {
       return rectangles.reduce((x, y) -> x.intersection(y).get());
